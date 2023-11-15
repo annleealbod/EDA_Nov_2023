@@ -17,4 +17,7 @@ Now we are looking at things in visualizations2.ipynb instead.
 
 
 *****Not finding anything particularly interesting in visualizations2, we move onto visualizations3 to analyze thefatherlode.csv
-Susan wanted to look at the following for each company and its respective affect on net revenue, total_headcount, etc etc.
+Susan wanted to look at the following for each company and its respective affect on net revenue, total_headcount, etc etc:
+
+First Shift: head_count, fill_rate, lead_time                                                                       (vs. total head_count after first_shift)
+First 30 Days on Platform: total_shfits (count of shift_id), head_count, fill_rate, time_between_shifts             (vs. total_headcount after first 30 days)
