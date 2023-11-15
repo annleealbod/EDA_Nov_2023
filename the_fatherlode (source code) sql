@@ -1,0 +1,42 @@
+-- The Fatherlode
+select case
+    when (`swcmm`.`csa_name_mod` in ('Dallas-Fort Worth, TX-OK', 'Las Vegas-Henderson, NV', 'Salt Lake City-Provo-Orem, UT')) then swcmm.csa_name_mod
+    else 'All Other Markets Combined'
+    end as csa_name_mod2,
+
+
+
+-- First Shift
+select fs.company_id, fs.shift_id, DATEDIFF(s.start_time, p.created_at) as shift_lead_time, s.head_count as head_count_requested, sw.head_count_worked, sw.head_count_worked / s.head_count as fill_rate
+from (
+select aws.company_id, aws.shift_id, min(aws.start_time) as first_shift
+from analytic_worked_shifts aws
+group by company_id ) as fs
+left join (
+    select aws2.shift_id, count(aws2.worker_user_id) as head_count_worked
+    from analytic_worked_shifts aws2
+    group by aws2.shift_id
+) sw on sw.shift_id = fs.shift_id
+join shifts s on fs.shift_id = s.id
+join postings p on s.posting_id = p.id
+group by fs.company_id
+
+
+-- First 30 Days
+select pt1.company_id, count(distinct aws2.shift_id) as total_shifts_f30d
+from (
+select fs.company_id, date(fs.company_start) as company_start, DATE_ADD(date(fs.company_start), INTERVAL 30 DAY) AS f30d_end
+from (
+select aws.company_id, min(aws.start_time) as company_start
+from analytic_worked_shifts aws
+group by company_id ) as fs
+) pt1
+join analytic_worked_shifts aws2 on pt1.company_id = aws2.company_id
+where aws2.start_time >= pt1.company_start
+and aws2.start_time <= pt1.f30d_end
+group by pt1.company_id;
+
+select company_id, shift_id, start_time
+from analytic_worked_shifts
+where company_id = 20
+order by start_time desc
