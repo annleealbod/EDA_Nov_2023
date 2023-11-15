@@ -1,0 +1,15 @@
+General Question: 
+What factors have an effect on client experience? What causes in increase in net revenue, shifts worked, fillrate, total_headcount, etc?
+
+Each company is a dot in the scatterplot, we will separate out companies into groups of markets (i.e. Utah, Texas, Nevada, and all others).
+
+Some ideas of factors that could be affecting client experience:
+-shift lead time
+-hourly wage
+-headcount (in groups) (and also continuous)
+-average time inbetween shifts
+-client industry 
+-fill rate of first shift worked (and also fill rate of first 30 days on app)
+
+***After some initial analysis, my boss and I think that companies that have been posting shifts on our platform for a long time but relatively inconsistently are skewing the data.
+New approach: also separate by companies who posted their first shifts in Q3 or Q4 of last year, and companies that posted their shift before that.
