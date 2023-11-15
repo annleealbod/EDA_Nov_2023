@@ -2,7 +2,7 @@
 select case
     when (`swcmm`.`csa_name_mod` in ('Dallas-Fort Worth, TX-OK', 'Las Vegas-Henderson, NV', 'Salt Lake City-Provo-Orem, UT')) then swcmm.csa_name_mod
     else 'All Other Markets Combined'
-    end as csa_name_mod2,
+    end as csa_name_mod2, c.id as company_id, c.name as company_name,
     shift_lead_time_fs, head_count_requested_fs, head_count_worked_fs, fill_rate_fs,
     tsf3d.total_shifts_f30d, worked_shifts_f30d, head_count_f30d, worked_shifts_f30d / head_count_f30d as fill_rate_f30d, avg_days_between_shifts_f30d,
     (total_head_count - fsinfo.head_count_requested_fs) as total_head_count_minus_fs, (total_head_count - head_count_f30d) as total_head_count_minus_f30d,
