@@ -14,3 +14,7 @@ Some ideas of factors that could be affecting client experience:
 ***After some initial analysis, my boss and I think that companies that have been posting shifts on our platform for a long time but relatively inconsistently are skewing the data.
 New approach: also separate by companies who posted their first shifts in Q3 or Q4 of last year, and companies that posted their shift before that.
 Now we are looking at things in visualizations2.ipynb instead.
+
+
+*****Not finding anything particularly interesting in visualizations2, we move onto visualizations3 to analyze thefatherlode.csv
+Susan wanted to look at the following for each company and its respective affect on net revenue, total_headcount, etc etc.
