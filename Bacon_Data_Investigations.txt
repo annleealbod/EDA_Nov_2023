@@ -1,0 +1,14 @@
+Exploratory Analysis That Has Already Been Done:
+
+Scatterplots-- (simple graphic, looking for patterns in the data)
+-Average Headcount vs Fill Rate (broken up by market and which quarter the company joined the platform)
+
+Correlation Mapping (searching for correlation between any and all of the following metrics)--
+-General Metrics: Average Headcount, Average Hourly Wage, Average Shift-Post Lead Time, Average Days Between Shifts, 2023 Revenue, Fill Rate, Shifts Worked, Total Head Count Requested
+(also broken up by market and which quarter the company joined the platform)
+-30 Day Effect: 
+
+
+Current:
+
+Future:
