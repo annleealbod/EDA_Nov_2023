@@ -7,7 +7,8 @@ Correlation Mapping (searching for correlation between any and all of the follow
 (also broken up by market and which quarter the company joined the platform)
 
 Logistical Regression--
-Michael's search for 
+Michael's scatterplot showing time since first shift and time since most recent shift, color indicating the "good" group (i.e., 
+companies that have joined in the last year, but have had a shift very recently)
 
 
 
