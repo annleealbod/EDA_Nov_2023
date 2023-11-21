@@ -7,7 +7,7 @@ Correlation Mapping (searching for correlation between any and all of the follow
 (also broken up by market and which quarter the company joined the platform)
 
 Logistical Regression--
-Michael's scatterplot showing time since first shift and time since most recent shift, color indicating the "good" group (i.e., 
+Scatterplot showing time since first shift vs time since most recent shift, color indicating the "good" group (i.e., 
 companies that have joined in the last year, but have had a shift very recently)
 
 
@@ -21,4 +21,5 @@ after the first 30 days (so we can conclude if the first 30 days set a pattern o
 
 Future Analysis:
 Scatterplots--
--First 30 Day Effect, color coordinated by decile
+-Total Worked Shifts (days 31-365) vs Fill Rate (first 30 days) color coordinated by decile (which companies are in the top 10%)
+-Total Worked Shifts (days 31-365) vs Total Worked (first 30 days) color coordinated by decile
