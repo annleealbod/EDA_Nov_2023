@@ -1,6 +1,7 @@
 Completed Analysis:
-Scatterplots-- (simple graphic, looking for patterns in the data)
--Average Headcount vs Fill Rate (broken up by market and which quarter the company joined the platform)
+Scatterplots-- (each point represents 1 company)
+-Average Headcount vs AVerage Fill Rate (broken up by market and which quarter the company joined the platform)
+-AVerage Shift Lead Time vs Average Fill Rate (broken up by market)
 
 Correlation Mapping (searching for correlation between any and all of the following metrics)--
 -General Metrics: Average Headcount, Average Hourly Wage, Average Shift-Post Lead Time, Average Days Between Shifts, 2023 Revenue, Fill Rate, Shifts Worked, Total Head Count Requested
