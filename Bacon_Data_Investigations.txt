@@ -1,9 +1,9 @@
 Completed Analysis:
 Scatterplots-- (each point represents 1 company)
 Average Headcount vs Average Fill Rate (broken up by market and which quarter the company joined the platform)
-Average Headcount vs Revenue (broken up by market)
-Average Shift Lead Time vs Average Fill Rate (broken up by market)
-Average Shift Lead Time vs Revenue (broken up by market)
+Average Headcount vs Revenue (broken up by market and which quarter the company joined the platform)
+Average Shift Lead Time vs Average Fill Rate (broken up by market and which quarter the company joined the platform)
+Average Shift Lead Time vs Revenue (broken up by market and which quarter the company joined the platform)
 Average Days Between Shifts vs Average Fill Rate (broken up by market)
 Average Days Between Shifts vs Revenue (broken up by market)
 
@@ -12,6 +12,8 @@ General Metrics: Average Headcount, Average Hourly Wage, Average Shift-Post Lead
 
 Logistic Regression--
 Scatterplot showing time since first shift vs time since most recent shift, color indicating the "good" group (i.e., companies that have joined in the last year and have had a shift very recently)
+
+
 Current Analysis:
 Correlation Mapping--
 30 Day Effect: Fill Rate, Head Count Worked, Shifts Worked, Average Days Between Shifts, and Shift Lead Time as compared to the same metrics after the first 30 days (so we can conclude if the first 30 days set a pattern or not)
@@ -19,6 +21,8 @@ Correlation Mapping--
 Scatterplots--
 Total Worked Shifts (days 31-365) vs Fill Rate (first 30 days) color coordinated by decile (which companies are in the top 10%, 20%, etc, of this year)
 Total Worked Shifts (days 31-365) vs Total Worked (first 30 days) color coordinated by decile
+
+
 Potential Future Analysis:
 (Suggestions welcome)
 Identifying predictors of what might increase shifts posted per month.
