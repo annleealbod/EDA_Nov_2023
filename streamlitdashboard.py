@@ -1,7 +1,5 @@
 import streamlit as st
 import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
 
 df = pd.read_csv("the motherlode.csv")
 
@@ -23,13 +21,10 @@ filtered_df = filtered_df[(filtered_df['csa_name_mod2'] == csa_filter) &
                           (filtered_df['fill_rate'] >= fill_rate_threshold) &
                           (filtered_df['avg_shift_lead'] <= lead_time_threshold)]
 
-# Create scatter plot
-fig, ax = plt.subplots(figsize=(15, 10))
-sns.scatterplot(x='avg_shift_lead', y='fill_rate', data=filtered_df, ax=ax)
-ax.set_title(f'{csa_filter} (Joined Prior to 2022Q3)')
-ax.set_ylabel('Average Fill Rate')
-ax.set_xlabel('Average Shift Lead Time')
-ax.set_ylim(0, 1.01)  # Set y-axis limits
+# Create scatter plot using Streamlit's native charting
+st.scatter_chart(data=filtered_df, x='avg_shift_lead', y='fill_rate')
 
-# Show the plot using Streamlit
-st.pyplot(fig)
+# Set chart title and axis labels
+st.title(f'{csa_filter} (Joined Prior to 2022Q3)')
+st.xlabel('Average Shift Lead Time')
+st.ylabel('Average Fill Rate')
