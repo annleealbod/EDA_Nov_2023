@@ -3,7 +3,6 @@ import pandas as pd
 
 df = pd.read_csv("scrambled_motherlode.csv")
 
-# Assuming df is your dataframe
 
 # Joined Prior to 2022Q3
 filtered_df = df[(df['year_quarter_comp_start'] < '2022Q3') & (df['csa_name_mod2'].isin(['Salt Lake City-Provo-Orem, UT', 'Dallas-Fort Worth, TX-OK', 'Las Vegas-Henderson, NV', 'All Other Markets Combined']))]
@@ -21,10 +20,12 @@ filtered_df = filtered_df[(filtered_df['csa_name_mod2'] == csa_filter) &
                           (filtered_df['fill_rate'] >= fill_rate_threshold) &
                           (filtered_df['avg_shift_lead'] <= lead_time_threshold)]
 
-# Create scatter plot using Streamlit's native charting
-st.scatter_chart(data=filtered_df, x='avg_shift_lead', y='fill_rate')
+# Create scatter plot using Plotly
+fig = px.scatter(filtered_df, x='avg_shift_lead', y='fill_rate', title=f'{csa_filter} (Joined Prior to 2022Q3)',
+                 labels={'avg_shift_lead': 'Average Shift Lead Time', 'fill_rate': 'Average Fill Rate'})
 
-# Set chart title and axis labels
-st.title(f'{csa_filter} (Joined Prior to 2022Q3)')
-st.xlabel('Average Shift Lead Time')
-st.ylabel('Average Fill Rate')
+# Set y-axis limits
+fig.update_yaxes(range=[0, 1.01])
+
+# Show the plot using Streamlit
+st.plotly_chart(fig)
