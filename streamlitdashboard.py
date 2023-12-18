@@ -31,14 +31,5 @@ ax.set_ylabel('Average Fill Rate')
 ax.set_xlabel('Average Shift Lead Time')
 ax.set_ylim(0, 1.01)  # Set y-axis limits
 
-# Label points for selected CSA
-for index, row in filtered_df.iterrows():
-    ax.annotate(row['company_name'],
-                xy=(row['avg_shift_lead'], row['fill_rate']),
-                xytext=(5, -10),
-                textcoords='offset points',
-                ha='right', va='bottom',
-                fontsize=8, color='red')
-
 # Show the plot using Streamlit
 st.pyplot(fig)
