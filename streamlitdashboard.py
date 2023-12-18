@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-df = pd.read_csv("the motherlode.csv")
+df = pd.read_csv("scrambled_motherlode.csv")
 
 # Assuming df is your dataframe
 
