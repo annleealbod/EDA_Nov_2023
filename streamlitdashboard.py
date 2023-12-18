@@ -42,6 +42,3 @@ for index, row in filtered_df.iterrows():
 
 # Show the plot using Streamlit
 st.pyplot(fig)
-
-# Optional: Display filtered DataFrame
-st.dataframe(filtered_df)
